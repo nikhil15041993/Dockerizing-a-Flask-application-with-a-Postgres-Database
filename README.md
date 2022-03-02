@@ -40,9 +40,9 @@ services:
       context: .
       dockerfile: Dockerfile
       #   env_file:
-      #- env.list
-    #environment:  
-     # SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://test:test@postgresql/test
+           #- env.list
+    environment:  
+      SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://test:test@postgresql/test
     restart: always
     
     depends_on:
@@ -79,7 +79,7 @@ volumes:
 
 For connect our flask app to postgress database container service  we just copy the flowing code to ``` app.config['SQLALCHEMY_DATABASE_URI'] ``` part in flask app.
 ```
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://test:test@postgresql/test'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 ```
 
 
