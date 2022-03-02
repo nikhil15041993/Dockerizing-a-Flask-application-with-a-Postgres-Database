@@ -1,12 +1,18 @@
 # Dockerizing-a-Flask-application-with-a-Postgres-Database
 
-1 Creating the flask application
-2 Create a Dockerfile
-3 Containerizing the services
+1. Creating the flask application
+2. Create requirements.txt
+3. Create a Dockerfile
+4. Containerizing the services
 
 
+## Create requirements.txt
+
+You can do it by running ``` pip freeze > requirements.txt``` will save all your python libraries with current version into requirements.txt file.
+
+
+## Create a Dockerfile
 ```
-## Dockerfile
 ----------------
 
 
@@ -26,8 +32,10 @@ CMD ["python", "main.py"]
 
 ```
 
+
+## Containerizing the services
+
 ```
-#Docker compose file
 --------------------
 
 
