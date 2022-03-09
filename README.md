@@ -6,6 +6,8 @@
 4. Containerizing the services
 
 
+
+
 ## Create requirements.txt
 
 You can do it by running ``` pip freeze > requirements.txt``` will save all your python libraries with current version into requirements.txt file.
@@ -37,7 +39,6 @@ CMD ["python", "main.py"]
 
 ```
 --------------------
-
 
 
 version: '3.3'
